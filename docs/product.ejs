@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+           <a href="/">Home</a>
+           <a href="/product">Products</a>
+           <a href="/create">Create</a>
+        </nav>
+   </header>
+   
+    <div id="product" class="new">
+        <div class="listp">
+           
+        <% if(products.length > 0) { %>
+        
+            <h1>NEW PRODUCTS</h1>
+            <div class="img">
+                <img class="img2 img3" src="https://www.melling.com/wp-content/uploads/2018/11/New-Products-1.png" alt="">
+            </div>
+<h3>Product Name &nbsp; &nbsp;- &nbsp; &nbsp; price</h3>            
+            <% products.forEach(function(product) { %>
+                <li><%= product.name %> - $<%= product.price %></li>
+            <% }); %>
+          <% } else { %>
+<h2>No products have been created yet</h2>
+        <%  } %>
+</div>
+</div>
+
+<footer class="footer">
+    <div class="social">
+        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="#"><i class="fa-brands fa-github"></i></a>
+        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+    </div>
+    <ul class="list">
+<li><a href="#">FAQ</a></li>
+<li><a href="#">Service</a></li>
+<li><a href="#">About</a></li>
+<li><a href="#">Contact</a></li>
+<li><a href="#">Privacy POlicies</a></li>
+    </ul>
+    <p class="copyright">
+        &copy; Swaroop Coder | All Right Reserved
+    </p>
+</footer>
+</body>
+</html>
